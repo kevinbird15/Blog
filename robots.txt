@@ -1,1 +1,1 @@
-Sitemap: https://kevinbird15.github.io/PersonalBlog/sitemap.xml
+Sitemap: https://kevinbird15.com/sitemap.xml
