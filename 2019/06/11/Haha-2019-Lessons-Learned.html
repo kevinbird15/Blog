@@ -1,0 +1,59 @@
+<p>I recently competed in the <a href="https://competitions.codalab.org/competitions/22194">Haha 2019 Competition</a> and ended up getting second place on predicting whether a tweet would be funny or not and third place on predicting how funny the tweet would be.</p>
+
+<p><img src="/assets/images/2019-06-11-Haha-2019-Lessons-Learned/clas_ranking.png" alt="clas_ranking" /></p>
+
+<p>I wanted to share some of my lessons learned from this competition to hopefully prevent somebody else (maybe even my future self) from making the same mistakes.</p>
+
+<ol>
+  <li>
+    <p><strong>Using <code class="highlighter-rouge">git add .</code> to put my code into a Github Repo</strong></p>
+
+    <p><code class="highlighter-rouge">git add .</code> is the only way that I have ever added files to a project and I learned that it is a terrible way to add files to a Github repo.  Basically this says to add every file in your current directory recursively into your Github repo.  I’m sure if you know what you are doing, this isn’t an issue, but I did not.  This was my attempt to put a starting repo into Github and then I was going to figure out what I actually wanted up there and take the rest down.  What ended up happening instead was I added all of the garbage files and every big file into my repo.  A better approach would have been to start small and only add the files that I definitely wanted added.  This for me would have been the .ipynb files and not a whole lot else.</p>
+  </li>
+  <li>
+    <p><strong>Creating a new databunch every time I reran the notebook</strong></p>
+
+    <p>One mistake that I made that became more obvious as the competition got closer to completion was creating a new databunch every time I ran the notebook.  The problem with doing this is that not only does it waste time, it also changes up the validation set every time.  This is great when you are wanting to make sure that your model is generalizable, but it is less ideal when trying to test whether a change is actually helpful and your score goes up slightly when looking at your validation scores.  Saving the databunch will help you maintain your sanity when trying slight tweaks and improvements.</p>
+  </li>
+  <li>
+    <p><strong>Not saving things required for reproducibility</strong></p>
+
+    <p>This ended up being one of my less impactful issues, but it could have been a lot bigger deal.  I didn’t realize that not only did I need to save the model to reload the model, I also needed to save the vocab associated with the databunch.  I put it lower than the databunch mistake because if I would have done that, it would have made this less important.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Load vocab in fastai
+</span><span class="n">sp_vocab</span> <span class="o">=</span> <span class="n">Vocab</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">"30k_Haha.vocab"</span><span class="p">)</span>
+   
+<span class="c1">#Save vocab in fastai
+</span><span class="n">sp_vocab</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">"30k_Haha.vocab"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Not keeping the Github Repo clean</strong></p>
+
+    <p>This may seem similar to #1 and it is similar, but it is a different issue.  Where did my submissions go? Where did my notebooks live?  Where did my test notebooks go?  All of these were in my root directory.  This isn’t an issue when you have one notebook and one dataset, but it will grow.  Just set your structure up at the beginning and have a directory for test notebooks, solid notebooks, data, models, and submissions.</p>
+  </li>
+  <li>
+    <p><strong>Not Auto-dating Everything that saves</strong></p>
+
+    <p>When I saved things, I manually changed the names of everything.  This led to some files being overwritten that I would have liked to have had.  I also would have used this in #4 to not only put them in the directories I mentioned, but also add a date file to those folders so I could have more organization.</p>
+
+    <p>I would do something like this next time and run it in the first cell of the notebook so that all of the cells from that run would be timestamped together.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timetuple</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Not Trying Blah</strong></p>
+
+    <p>One quote that I first heard from Jeremy Howard during his fastai deep learning course is that if you are wondering if blah is a good idea, to try blah and see.  Until you test out an idea it could be both the best and worst idea you’ve ever had and you won’t know which it is until you test it out.</p>
+  </li>
+  <li>
+    <p><strong>Not changing hyper-parameters</strong></p>
+
+    <p>It took me way too long to start modifying the hyper-parameters when working on this problem.  Change everything and see how it helps or hurts things!</p>
+  </li>
+</ol>
+
+<p>Thanks for reading and hopefully there is something useful here for you.  My idea is to do a recap like this after each competition and hopefully over time it makes me a better coder and practitioner.  My next blog post is going to be a walkthrough of Hiromi and my approach to this competition because even with all of the mistakes I made, we ended up with a pretty solid classifier and regressor at the end of the day.</p>
+
