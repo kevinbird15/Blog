@@ -8,8 +8,6 @@ hide: false
 categories: [no second turkey]
 ---
 
-## The "No Second Turkey" Learning Concept
-
 When I reflect on learning processes that work for me, writing out my thought process comes pretty high on the list for me.  A second thing is to re-explain the concept in my own words.  Blog posts that I tag as "no second turkey" are going to be as much as possible, unaltered sessions of my thought process.  In the past, everything I end up sharing is a polished version of my code and the truth of the matter is, there are a lot of ugly steps along the way that never get published which can be really intimidating if you don't see the steps of the journey.  
 
 In cooking shows, the host has a perfect looking turkey ready to pull out of the oven which is why I'm calling this the 'no second turkey' approach.  If things don't go well, we may end up with a burnt turkey or two.  But we will learn something along the way and hopefully it will be more focused on coding and ideas around fastai rather than cooking!
