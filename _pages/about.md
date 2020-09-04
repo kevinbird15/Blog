@@ -22,4 +22,3 @@ Over the past few years, I have been learning how to analyze data using online .
 
 More recently, I have been focusing on putting our models into APIs so they can be  called by systems that benefit from using the predictions our team is able to output.  This enables us to make any of our systems able to use our algorithms and really opens up the possibilities.  One of the areas I am most excited to use this functionality is combining the RPA work I've done with some of these predictive models to allow a bot to tackle more complex problems that may not be easy this or that decisions.  
 
-![Picture of Myself](\assets\images\About\Picture of Myself.jpg)
