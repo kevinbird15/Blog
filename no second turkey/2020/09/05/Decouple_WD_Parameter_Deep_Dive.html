@@ -251,7 +251,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">show_doc_working</span><span class="p">(</span><span class="n">func_name</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">show_doc_with_source</span><span class="p">(</span><span class="n">func_name</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">inspector</span><span class="o">.</span><span class="n">_get_info</span><span class="p">(</span><span class="n">func_name</span><span class="p">,</span> <span class="n">detail_level</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="s1">'text/plain'</span><span class="p">])</span>
 </pre></div>
 
@@ -269,7 +269,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_working</span><span class="p">(</span><span class="n">show_doc</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_with_source</span><span class="p">(</span><span class="n">show_doc_with_source</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -285,9 +285,9 @@ window.onload = wrap_img;
 <pre><span class="ansi-red-fg">Signature:</span> <span class="ansi-blue-fg">(</span>func_name<span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Docstring:</span> &lt;no docstring&gt;
 <span class="ansi-red-fg">Source:</span>   
-<span class="ansi-green-fg">def</span> show_doc<span class="ansi-blue-fg">(</span>func_name<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">def</span> show_doc_with_source<span class="ansi-blue-fg">(</span>func_name<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
     print<span class="ansi-blue-fg">(</span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>inspector<span class="ansi-blue-fg">.</span>_get_info<span class="ansi-blue-fg">(</span>func_name<span class="ansi-blue-fg">,</span> detail_level<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'text/plain'</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-red-fg">File:</span>      ~/Research/optimizers/&lt;ipython-input-2-86e187a5db1b&gt;
+<span class="ansi-red-fg">File:</span>      ~/Research/optimizers/&lt;ipython-input-2-f848c98c9c35&gt;
 <span class="ansi-red-fg">Type:</span>      function
 
 </pre>
@@ -324,7 +324,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_working</span><span class="p">(</span><span class="n">SGD</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_with_source</span><span class="p">(</span><span class="n">SGD</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -391,7 +391,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_working</span><span class="p">(</span><span class="n">weight_decay</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_with_source</span><span class="p">(</span><span class="n">weight_decay</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -429,7 +429,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_working</span><span class="p">(</span><span class="n">l2_reg</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_with_source</span><span class="p">(</span><span class="n">l2_reg</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1093,10 +1093,31 @@ param|  lr: 1.0 wd: 1.0 - tensor([1.]) -&gt; tensor([0.])
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>weight_decay<span class="o">??</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_with_source</span><span class="p">(</span><span class="n">weight_decay</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-red-fg">Signature:</span> <span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">,</span> lr<span class="ansi-blue-fg">,</span> wd<span class="ansi-blue-fg">,</span> do_wd<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-fg">Source:</span>   
+<span class="ansi-green-fg">def</span> weight_decay<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">,</span> lr<span class="ansi-blue-fg">,</span> wd<span class="ansi-blue-fg">,</span> do_wd<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+    <span class="ansi-blue-fg">"Weight decay as decaying `p` with `lr*wd`"</span>
+    <span class="ansi-green-fg">if</span> do_wd <span class="ansi-green-fg">and</span> wd<span class="ansi-blue-fg">!=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span> p<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">.</span>mul_<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span> <span class="ansi-blue-fg">-</span> lr<span class="ansi-blue-fg">*</span>wd<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-fg">File:</span>      ~/development/fastai/fastai/optimizer.py
+<span class="ansi-red-fg">Type:</span>      function
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1227,24 +1248,7 @@ param|  lr: 1.0 wd: 1.0 - tensor([1.]) -&gt; tensor([0.])
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l2_reg</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_working</span><span class="p">(</span><span class="n">l2_reg</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_doc_with_source</span><span class="p">(</span><span class="n">l2_reg</span><span class="p">)</span>
 </pre></div>
 
     </div>
