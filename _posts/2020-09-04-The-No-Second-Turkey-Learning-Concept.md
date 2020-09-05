@@ -13,4 +13,3 @@ When I reflect on learning processes that work for me, writing out my thought pr
 In cooking shows, the host has a perfect looking turkey ready to pull out of the oven which is why I'm calling this the 'no second turkey' approach.  If things don't go well, we may end up with a burnt turkey or two.  But we will learn something along the way and hopefully it will be more focused on coding and ideas around fastai rather than cooking!
 
 I know some readers aren't going to care about the process, but may still want to know what I learned during my journey.  For this, I will start each blog with an executive summary section that will summarize anything interesting that I find along the way.  These won't include any code, but may link to sections in the notebook that will provide more color.  This goal of this section is to be simple enough that anybody could understand the takeaways. 
-
