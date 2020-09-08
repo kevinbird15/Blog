@@ -897,12 +897,14 @@ All three of these use itentical code for the optimizer itself.  The huge differ
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>$\begin{align} 
+<p>$
+\begin{align} 
 \begin{split} 
 v_t &amp;= \gamma v_{t-1} + \eta \nabla_\theta J( \theta) \\ 
 \theta &amp;= \theta - v_t 
 \end{split} 
-\end{align}$</p>
+\end{align}
+$</p>
 
 </div>
 </div>
@@ -919,12 +921,14 @@ v_t &amp;= \gamma v_{t-1} + \eta \nabla_\theta J( \theta) \\
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>$\begin{align} 
+<p>$
+\begin{align} 
 \begin{split} 
 v_t &amp;= \gamma v_{t-1} + \eta \nabla_\theta J( \theta - \gamma v_{t-1} ) \\ 
 \theta &amp;= \theta - v_t 
 \end{split} 
-\end{align}$</p>
+\end{align}
+$</p>
 
 </div>
 </div>
@@ -962,22 +966,26 @@ $\theta_{t+1} = \theta_{t} - \dfrac{\eta}{\sqrt{G_{t} + \epsilon}} \odot g_{t}$<
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>$E[g^2]_t = \gamma E[g^2]_{t-1} + (1 - \gamma) g^2_t$<br>
-$\begin{align} 
+$
+\begin{align} 
 \begin{split} 
 \Delta \theta_t &amp;= - \eta \cdot g_{t, i} \\ 
 \theta_{t+1} &amp;= \theta_t + \Delta \theta_t \end{split} 
-\end{align}$<br>
+\end{align}
+$<br>
 $\Delta \theta_t = - \dfrac{\eta}{\sqrt{G_{t} + \epsilon}} \odot g_{t}$<br>
 $\Delta \theta_t = - \dfrac{\eta}{\sqrt{E[g^2]_t + \epsilon}} g_{t}$<br>
 $\Delta \theta_t = - \dfrac{\eta}{RMS[g]_{t}} g_t$<br>
 $E[\Delta \theta^2]_t = \gamma E[\Delta \theta^2]_{t-1} + (1 - \gamma) \Delta \theta^2_t$<br>
 $RMS[\Delta \theta]_{t} = \sqrt{E[\Delta \theta^2]_t + \epsilon}$<br>
-$\begin{align} 
+$
+\begin{align} 
 \begin{split} 
 \Delta \theta_t &amp;= - \dfrac{RMS[\Delta \theta]_{t-1}}{RMS[g]_{t}} g_{t} \\ 
 \theta_{t+1} &amp;= \theta_t + \Delta \theta_t 
 \end{split} 
-\end{align}$</p>
+\end{align}
+$</p>
 
 </div>
 </div>
